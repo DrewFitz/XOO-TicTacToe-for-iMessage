@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1E801E1D319683006B94A2 /* TicTacToeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E801D1D319683006B94A2 /* TicTacToeBackgroundView.swift */; };
+		3A276A5B1D275B7D00238628 /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A276A5A1D275B7D00238628 /* ActiveGameViewController.swift */; };
+		3A377C131D2D93BE00ECEC2A /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A377C121D2D93BE00ECEC2A /* NewGameViewController.swift */; };
+		3A5B01421D2E03640070D5C9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B01411D2E03640070D5C9 /* GradientView.swift */; };
+		3AC764DF1D2D73F1004DA34B /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC764DE1D2D73F1004DA34B /* TicTacToeView.swift */; };
 		3AEE9A971D25B36800ABDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE9A961D25B36800ABDE73 /* Assets.xcassets */; };
 		3AEE9A9E1D25B36800ABDE73 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AEE9A9D1D25B36800ABDE73 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3AEE9AA31D25B36800ABDE73 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AEE9AA21D25B36800ABDE73 /* Messages.framework */; };
 		3AEE9AA61D25B36800ABDE73 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE9AA51D25B36800ABDE73 /* MessagesViewController.swift */; };
 		3AEE9AA91D25B36800ABDE73 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE9AA71D25B36800ABDE73 /* MainInterface.storyboard */; };
 		3AEE9AAB1D25B36800ABDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE9AAA1D25B36800ABDE73 /* Assets.xcassets */; };
+		3AEE9AB71D25DD1700ABDE73 /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE9AB61D25DD1700ABDE73 /* TicTacToeGame.swift */; };
+		3AEE9AB91D25E26D00ABDE73 /* TicTacToeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE9AB81D25E26D00ABDE73 /* TicTacToeCell.swift */; };
+		3AEE9ABB1D26E0E000ABDE73 /* CollectionViewGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEE9ABA1D26E0E000ABDE73 /* CollectionViewGridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A1E801D1D319683006B94A2 /* TicTacToeBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeBackgroundView.swift; sourceTree = "<group>"; };
+		3A276A5A1D275B7D00238628 /* ActiveGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
+		3A377C121D2D93BE00ECEC2A /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		3A5B01411D2E03640070D5C9 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		3AC764DE1D2D73F1004DA34B /* TicTacToeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
 		3AEE9A931D25B36800ABDE73 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEE9A961D25B36800ABDE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AEE9A981D25B36800ABDE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +62,9 @@
 		3AEE9AA81D25B36800ABDE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3AEE9AAA1D25B36800ABDE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AEE9AAC1D25B36800ABDE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AEE9AB61D25DD1700ABDE73 /* TicTacToeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
+		3AEE9AB81D25E26D00ABDE73 /* TicTacToeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeCell.swift; sourceTree = "<group>"; };
+		3AEE9ABA1D26E0E000ABDE73 /* CollectionViewGridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewGridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A377C0F1D2D92CC00ECEC2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AEE9AB61D25DD1700ABDE73 /* TicTacToeGame.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3A377C101D2D92D600ECEC2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A276A5A1D275B7D00238628 /* ActiveGameViewController.swift */,
+				3AEE9AA51D25B36800ABDE73 /* MessagesViewController.swift */,
+				3A377C121D2D93BE00ECEC2A /* NewGameViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3A377C111D2D92E500ECEC2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A5B01411D2E03640070D5C9 /* GradientView.swift */,
+				3A1E801D1D319683006B94A2 /* TicTacToeBackgroundView.swift */,
+				3AC764DE1D2D73F1004DA34B /* TicTacToeView.swift */,
+				3AEE9ABA1D26E0E000ABDE73 /* CollectionViewGridLayout.swift */,
+				3AEE9AB81D25E26D00ABDE73 /* TicTacToeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		3AEE9A8C1D25B36800ABDE73 = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +148,12 @@
 		3AEE9AA41D25B36800ABDE73 /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				3AEE9AA51D25B36800ABDE73 /* MessagesViewController.swift */,
-				3AEE9AA71D25B36800ABDE73 /* MainInterface.storyboard */,
-				3AEE9AAA1D25B36800ABDE73 /* Assets.xcassets */,
 				3AEE9AAC1D25B36800ABDE73 /* Info.plist */,
+				3AEE9AAA1D25B36800ABDE73 /* Assets.xcassets */,
+				3AEE9AA71D25B36800ABDE73 /* MainInterface.storyboard */,
+				3A377C111D2D92E500ECEC2A /* View */,
+				3A377C101D2D92D600ECEC2A /* Controller */,
+				3A377C0F1D2D92CC00ECEC2A /* Model */,
 			);
 			path = MessagesExtension;
 			sourceTree = "<group>";
@@ -215,6 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEE9ABB1D26E0E000ABDE73 /* CollectionViewGridLayout.swift in Sources */,
+				3AEE9AB91D25E26D00ABDE73 /* TicTacToeCell.swift in Sources */,
+				3A377C131D2D93BE00ECEC2A /* NewGameViewController.swift in Sources */,
+				3A1E801E1D319683006B94A2 /* TicTacToeBackgroundView.swift in Sources */,
+				3A276A5B1D275B7D00238628 /* ActiveGameViewController.swift in Sources */,
+				3AC764DF1D2D73F1004DA34B /* TicTacToeView.swift in Sources */,
+				3AEE9AB71D25DD1700ABDE73 /* TicTacToeGame.swift in Sources */,
+				3A5B01421D2E03640070D5C9 /* GradientView.swift in Sources */,
 				3AEE9AA61D25B36800ABDE73 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe.MessagesExtension;
@@ -345,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe.MessagesExtension;
@@ -399,6 +457,7 @@
 				3AEE9AB11D25B36800ABDE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AEE9AB31D25B36800ABDE73 /* Build configuration list for PBXNativeTarget "TicTacToe" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +466,7 @@
 				3AEE9AB51D25B36800ABDE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
