@@ -32,7 +32,7 @@ import CoreGraphics
             context.setFillColor(backgroundColor!.cgColor)
             context.fill(bounds)
             
-            let halfBounds = bounds.size.apply(transform: CGAffineTransform(scaleX: 0.5, y: 0.5))
+            let halfBounds = bounds.size.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))
             let center = CGPoint(x: halfBounds.width, y: halfBounds.height)
             drawMove(move, at: center, context: context)
         }

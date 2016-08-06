@@ -40,8 +40,10 @@ import UIKit
         return paths
     }
     
-    override func collectionViewContentSize() -> CGSize {
-        return containerSize
+    override var collectionViewContentSize: CGSize {
+        get {
+            return containerSize
+        }
     }
         
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {

@@ -15,14 +15,9 @@ import CoreGraphics
             context.clear(rect)
             
             let space = context.colorSpace
-            
-//            let colors : [CIColor] = [
-//                CIColor.init(red: 161.0/255, green: 247.0/255, blue: 247.0/255),
-//                CIColor.init(red: 236.0/255, green: 0.000/255, blue: 236.0/255)
-//            ]
-            
+                        
             if backgroundColor == nil {
-                backgroundColor = UIColor.clear()
+                backgroundColor = UIColor.clear
             }
             
             let colors : [CIColor] = [CIColor.init(color: tintColor), CIColor.init(color: backgroundColor!)]

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lFr-1z-9AM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lFr-1z-9AM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,72 +39,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ott-Kc-XOF" customClass="TicTacToeBackgroundView" customModule="MessagesExtension" customModuleProvider="target">
-                                <subviews>
-                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-kw-RHw">
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <collectionViewLayout key="collectionViewLayout" id="q4Q-lx-af7" customClass="CollectionViewGridLayout" customModule="MessagesExtension" customModuleProvider="target">
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="rows">
-                                                    <integer key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="columns">
-                                                    <integer key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </collectionViewLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="display" id="KFW-Es-Rgj" customClass="TicTacToeCell" customModule="MessagesExtension" customModuleProvider="target">
-                                                <frame key="frameInset" width="66" height="66"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xs-2W-C82" customClass="TicTacToeView" customModule="MessagesExtension" customModuleProvider="target">
-                                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        </view>
-                                                    </subviews>
-                                                </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-3z-hmT">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XZ3-w0-cbG">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-Te-k99">
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Y3w-re-MEd">
+                                                <frame key="frameInset"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ott-Kc-XOF" customClass="TicTacToeBackgroundView" customModule="MessagesExtension" customModuleProvider="target">
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="tintColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-kw-RHw">
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <collectionViewLayout key="collectionViewLayout" id="q4Q-lx-af7" customClass="CollectionViewGridLayout" customModule="MessagesExtension" customModuleProvider="target">
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="rows">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="columns">
+                                                                    <integer key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </collectionViewLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="display" id="KFW-Es-Rgj" customClass="TicTacToeCell" customModule="MessagesExtension" customModuleProvider="target">
+                                                                <frame key="frameInset" width="66" height="66"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xs-2W-C82" customClass="TicTacToeView" customModule="MessagesExtension" customModuleProvider="target">
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </view>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="9xs-2W-C82" firstAttribute="top" secondItem="KFW-Es-Rgj" secondAttribute="top" id="1aP-hX-P9K"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="9xs-2W-C82" secondAttribute="bottom" id="PU8-DI-jSi"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="9xs-2W-C82" secondAttribute="trailing" id="ZXt-1g-kJh"/>
+                                                                    <constraint firstItem="9xs-2W-C82" firstAttribute="leading" secondItem="KFW-Es-Rgj" secondAttribute="leading" id="iZF-Jd-DF6"/>
+                                                                </constraints>
+                                                                <size key="customSize" width="66" height="66"/>
+                                                                <connections>
+                                                                    <outlet property="ticTacToeView" destination="9xs-2W-C82" id="5HI-i3-pzo"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="9yR-8Z-h5l" id="tVP-UR-NPi"/>
+                                                            <outlet property="delegate" destination="9yR-8Z-h5l" id="rxi-2w-X6h"/>
+                                                        </connections>
+                                                    </collectionView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="9xs-2W-C82" secondAttribute="trailing" id="2pm-Bi-NOJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9xs-2W-C82" secondAttribute="bottom" id="NJe-Vg-tao"/>
-                                                    <constraint firstItem="9xs-2W-C82" firstAttribute="top" secondItem="KFW-Es-Rgj" secondAttribute="top" id="XVh-VS-bqH"/>
-                                                    <constraint firstItem="9xs-2W-C82" firstAttribute="leading" secondItem="KFW-Es-Rgj" secondAttribute="leading" id="eyE-tt-IZK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0F9-kw-RHw" secondAttribute="trailing" constant="15" id="4Yx-2g-IxN"/>
+                                                    <constraint firstItem="0F9-kw-RHw" firstAttribute="leading" secondItem="Y3w-re-MEd" secondAttribute="leading" constant="15" id="8Dt-Sv-ziC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0F9-kw-RHw" secondAttribute="bottom" constant="15" id="AfO-XW-7jc"/>
+                                                    <constraint firstItem="ott-Kc-XOF" firstAttribute="top" secondItem="Y3w-re-MEd" secondAttribute="top" constant="10" id="AmH-Ny-kqs"/>
+                                                    <constraint firstItem="ott-Kc-XOF" firstAttribute="leading" secondItem="Y3w-re-MEd" secondAttribute="leading" constant="10" id="M61-n0-bLf"/>
+                                                    <constraint firstItem="0F9-kw-RHw" firstAttribute="top" secondItem="Y3w-re-MEd" secondAttribute="top" constant="15" id="McU-0l-SNe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ott-Kc-XOF" secondAttribute="bottom" constant="10" id="YZC-oU-UbY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ott-Kc-XOF" secondAttribute="trailing" constant="10" id="uPO-Bf-3FO"/>
                                                 </constraints>
-                                                <size key="customSize" width="66" height="66"/>
-                                                <connections>
-                                                    <outlet property="ticTacToeView" destination="9xs-2W-C82" id="5HI-i3-pzo"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="9yR-8Z-h5l" id="tVP-UR-NPi"/>
-                                            <outlet property="delegate" destination="9yR-8Z-h5l" id="rxi-2w-X6h"/>
-                                        </connections>
-                                    </collectionView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.99012064933776855" green="0.86181473731994629" blue="0.99978721141815186" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IuW-Te-k99" firstAttribute="leading" secondItem="XZ3-w0-cbG" secondAttribute="leading" id="Bhi-7w-MvO"/>
+                                        <constraint firstAttribute="bottom" secondItem="IuW-Te-k99" secondAttribute="bottom" id="FPn-BY-oBL"/>
+                                        <constraint firstItem="IuW-Te-k99" firstAttribute="top" secondItem="XZ3-w0-cbG" secondAttribute="top" id="dG2-eL-rJo"/>
+                                        <constraint firstAttribute="trailing" secondItem="IuW-Te-k99" secondAttribute="trailing" id="w0j-jo-BbA"/>
+                                    </constraints>
+                                </view>
                                 <constraints>
-                                    <constraint firstItem="0F9-kw-RHw" firstAttribute="top" secondItem="ott-Kc-XOF" secondAttribute="top" constant="10" id="2MC-Zt-PrS"/>
-                                    <constraint firstAttribute="width" secondItem="ott-Kc-XOF" secondAttribute="height" multiplier="1:1" id="D3z-GW-CbP"/>
-                                    <constraint firstAttribute="trailing" secondItem="0F9-kw-RHw" secondAttribute="trailing" constant="10" id="EZ5-qe-XJU"/>
-                                    <constraint firstItem="0F9-kw-RHw" firstAttribute="leading" secondItem="ott-Kc-XOF" secondAttribute="leading" constant="10" id="PBn-3k-ptu"/>
-                                    <constraint firstAttribute="bottom" secondItem="0F9-kw-RHw" secondAttribute="bottom" constant="10" id="Yzu-RM-UxJ"/>
+                                    <constraint firstAttribute="width" secondItem="PuU-3z-hmT" secondAttribute="height" id="3aL-6F-jT3"/>
+                                    <constraint firstAttribute="width" priority="999" constant="300" id="awC-iQ-GdL"/>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="sUi-Av-BAC"/>
                                 </constraints>
-                            </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96868836879730225" green="0.36403012275695801" blue="0.99927037954330444" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.57458978891372681" green="1" blue="0.99548298120498657" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.0" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.3843137254901961" green="0.94117647058823528" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ott-Kc-XOF" firstAttribute="centerX" secondItem="fnB-rt-DtW" secondAttribute="centerX" id="0K3-Re-LXs"/>
-                            <constraint firstItem="Kep-OX-HwH" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ott-Kc-XOF" secondAttribute="top" id="KYK-E9-QzX"/>
-                            <constraint firstItem="ott-Kc-XOF" firstAttribute="leading" secondItem="fnB-rt-DtW" secondAttribute="leadingMargin" priority="999" constant="20" id="Uw1-VB-cf2"/>
-                            <constraint firstItem="ott-Kc-XOF" firstAttribute="centerY" secondItem="fnB-rt-DtW" secondAttribute="centerY" id="mUu-28-cIV"/>
+                            <constraint firstItem="PuU-3z-hmT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnB-rt-DtW" secondAttribute="leadingMargin" constant="10" id="KHd-DZ-RMl"/>
+                            <constraint firstItem="PuU-3z-hmT" firstAttribute="centerY" secondItem="fnB-rt-DtW" secondAttribute="centerY" id="dog-Oa-C2B"/>
+                            <constraint firstItem="PuU-3z-hmT" firstAttribute="centerX" secondItem="fnB-rt-DtW" secondAttribute="centerX" id="xVB-jq-JBo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -127,26 +160,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-5A-ufM">
-                                <frame key="frameInset" minX="-1"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                <state key="normal" title="New Game">
-                                    <color key="titleColor" red="0.99607843137254903" green="0.86274509803921573" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="newGameButtonPressed:" destination="qWT-sS-l9C" eventType="touchUpInside" id="cTX-Sx-bLz"/>
-                                </connections>
-                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olR-TZ-Yn0">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LKW-1m-cdo">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-5w-lSu">
+                                            <frame key="frameInset"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="dbx-X2-2ti">
+                                                <frame key="frameInset"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-5A-ufM">
+                                                        <frame key="frameInset" minY="-1"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                                        <state key="normal" title="New Game">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="newGameButtonPressed:" destination="qWT-sS-l9C" eventType="touchUpInside" id="cTX-Sx-bLz"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="100" id="O4w-a6-xHV"/>
+                                    <constraint firstAttribute="width" secondItem="olR-TZ-Yn0" secondAttribute="height" multiplier="3:1" id="mGd-ZH-hSp"/>
+                                </constraints>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.36470588235294116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.57647058823529407" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.0" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.40392156862745099" green="0.96470588235294119" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="olR-TZ-Yn0" firstAttribute="centerX" secondItem="wDw-dK-pzP" secondAttribute="centerX" id="Acd-Ag-Nd5"/>
+                            <constraint firstItem="olR-TZ-Yn0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wDw-dK-pzP" secondAttribute="leadingMargin" constant="10" id="IJa-Yd-NbK"/>
+                            <constraint firstItem="olR-TZ-Yn0" firstAttribute="centerY" secondItem="wDw-dK-pzP" secondAttribute="centerY" id="IeQ-2o-V8A"/>
+                            <constraint firstItem="sdV-lO-WmS" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="olR-TZ-Yn0" secondAttribute="top" id="OAr-CP-qJb"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oh-bd-Mxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="796"/>
+            <point key="canvasLocation" x="206.25" y="795.42253521126759"/>
         </scene>
     </scenes>
 </document>

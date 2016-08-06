@@ -74,9 +74,7 @@ struct TicTacToeGame {
     }
     
     mutating func from(components: URLComponents) -> Bool {
-        guard let componentString = components.path else {
-            return false
-        }
+        let componentString = components.path
         var newBoard = [Move]()
         for character in componentString.characters {
             if let move = Move(rawValue: String(character)) {
