@@ -59,7 +59,7 @@ class MessagesViewController: MSMessagesAppViewController {
         
     }
     
-    // MARK: - Utilities
+    // MARK: Utilities
     
     private func present(game: TicTacToeGame) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "ActiveGameScene")

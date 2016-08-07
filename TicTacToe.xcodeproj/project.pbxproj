@@ -10,6 +10,7 @@
 		3A1E801E1D319683006B94A2 /* TicTacToeBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E801D1D319683006B94A2 /* TicTacToeBackgroundView.swift */; };
 		3A276A5B1D275B7D00238628 /* ActiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A276A5A1D275B7D00238628 /* ActiveGameViewController.swift */; };
 		3A377C131D2D93BE00ECEC2A /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A377C121D2D93BE00ECEC2A /* NewGameViewController.swift */; };
+		3A43326C1D567C600036663E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A43326B1D567C600036663E /* Launch Screen.storyboard */; };
 		3A5B01421D2E03640070D5C9 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B01411D2E03640070D5C9 /* GradientView.swift */; };
 		3AC764DF1D2D73F1004DA34B /* TicTacToeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC764DE1D2D73F1004DA34B /* TicTacToeView.swift */; };
 		3AEE9A971D25B36800ABDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEE9A961D25B36800ABDE73 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		3A1E801D1D319683006B94A2 /* TicTacToeBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeBackgroundView.swift; sourceTree = "<group>"; };
 		3A276A5A1D275B7D00238628 /* ActiveGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGameViewController.swift; sourceTree = "<group>"; };
 		3A377C121D2D93BE00ECEC2A /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
+		3A43326B1D567C600036663E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3A5B01411D2E03640070D5C9 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		3AC764DE1D2D73F1004DA34B /* TicTacToeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeView.swift; sourceTree = "<group>"; };
 		3AEE9A931D25B36800ABDE73 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 			children = (
 				3AEE9A961D25B36800ABDE73 /* Assets.xcassets */,
 				3AEE9A981D25B36800ABDE73 /* Info.plist */,
+				3A43326B1D567C600036663E /* Launch Screen.storyboard */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A43326C1D567C600036663E /* Launch Screen.storyboard in Resources */,
 				3AEE9A971D25B36800ABDE73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,11 +394,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -404,11 +410,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -417,7 +425,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -430,7 +440,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				INFOPLIST_FILE = TicTacToe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DrewFitzpatrick.TicTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
