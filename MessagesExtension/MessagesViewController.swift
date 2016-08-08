@@ -33,7 +33,6 @@ class MessagesViewController: MSMessagesAppViewController {
             }
             present(game: game, readOnly: readOnly)
         }
-        
     }
     
     override func willSelect(_ message: MSMessage, conversation: MSConversation) {
@@ -65,7 +64,6 @@ class MessagesViewController: MSMessagesAppViewController {
             }
             present(game: game, readOnly: readOnly)
         }
-        
     }
     
     // MARK: Utilities
@@ -125,6 +123,24 @@ extension MessagesViewController : NewGameViewControllerDelegate {
 }
 
 extension MessagesViewController : ActiveGameViewControllerDelegate {
+    
+    private func makeCaptionForGame(_ game : TicTacToeGame) -> String? {
+        switch game.currentMoveNumber() {
+        case Int.min ... 0:
+            return nil
+        case 1:
+            return "Started a new game."
+        case 2 ... Int.max:
+            if let winner = game.winner() {
+                return "\(winner)".capitalized + " won the game!"
+            } else {
+                return nil
+            }
+        default:
+            fatalError("Unexpected value for Int")
+        }
+    }
+    
     func activeGameView(_ viewController: ActiveGameViewController, didSelectCellAt indexPath: IndexPath) {
         
         if  let image = viewController.imageSnapshot(),
@@ -133,6 +149,12 @@ extension MessagesViewController : ActiveGameViewControllerDelegate {
             let message = MSMessage(session: activeConversation?.selectedMessage?.session ?? MSSession())
             let layout = MSMessageTemplateLayout()
             layout.image = image
+            
+            let caption = makeCaptionForGame(viewController.game)
+            layout.caption = caption
+            message.summaryText = caption
+            message.accessibilityLabel = caption
+            
             message.layout = layout
             message.url = viewController.game.toURLComponents().url
             conversation.insert(message, completionHandler: nil)

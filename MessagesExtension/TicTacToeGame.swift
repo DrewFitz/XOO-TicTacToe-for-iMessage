@@ -56,8 +56,12 @@ struct TicTacToeGame {
         return nil
     }
     
+    func currentMoveNumber() -> Int {
+        return board.filter {$0 != .none} .count
+    }
+    
     func nextMove() -> Move {
-        let count = board.filter {$0 != .none} .count
+        let count = currentMoveNumber()
         
         return [.cross, .circle][count % 2]
     }
