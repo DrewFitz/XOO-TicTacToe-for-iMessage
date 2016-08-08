@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QrC-Ji-OlD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sb2-bU-Tlo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="43u-S5-kyD"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="fnB-rt-DtW" customClass="GradientView" customModule="MessagesExtension" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-3z-hmT">
@@ -148,7 +148,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZB-zI-JgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="moK-ec-bRX">
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="moK-ec-bRX" userLabel="Double Two Tap Gesture Recognizer">
                     <connections>
                         <action selector="doubleTwoTapGestureActionWithSender:" destination="9yR-8Z-h5l" id="ZCA-4O-3YS"/>
                     </connections>
@@ -165,7 +165,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sry-D9-PHq"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="wDw-dK-pzP" customClass="GradientView" customModule="MessagesExtension" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olR-TZ-Yn0">

@@ -15,6 +15,13 @@ protocol NewGameViewControllerDelegate {
 class NewGameViewController: UIViewController {
     
     var delegate : NewGameViewControllerDelegate?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let gradientView = view as? GradientView {
+            let index = UserDefaults.init().integer(forKey: "backgroundGradient")
+            gradientView.gradient = ThemeStore.gradient(index)
+        }
+    }
 
     @IBAction func newGameButtonPressed(_ sender: AnyObject) {
         delegate?.controllerDidSelectNewGame(self)

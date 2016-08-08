@@ -11,12 +11,12 @@ import CoreGraphics
 
 @IBDesignable class GradientView : UIView {
     
-    var gradient : Gradient = ThemeStore.shared.defaultGradient {
+    var gradient : Gradient = ThemeStore.defaultGradient {
         didSet {
             setNeedsDisplay()
         }
     }
-    
+        
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
             context.clear(rect)
@@ -37,6 +37,6 @@ import CoreGraphics
     }
     
     override func prepareForInterfaceBuilder() {
-        gradient = ThemeStore.shared.summerCitrusGradient
+        gradient = ThemeStore.summerCitrusGradient
     }
 }

@@ -20,15 +20,20 @@ class ActiveGameViewController: UIViewController {
     var readOnly : Bool = false
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var gradientView: GradientView!
-
-    // HACK: fix erroneous edge insets for the scroll/collection view
-    override func viewDidLayoutSubviews() {
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        collectionView.setContentOffset(CGPoint.zero, animated: false)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let index = UserDefaults.init().integer(forKey: "backgroundGradient")
+        gradientView.gradient = ThemeStore.gradient(index)
     }
     
     @IBAction func doubleTwoTapGestureAction(sender:AnyObject) {
-        gradientView.gradient = ThemeStore.shared.nextGradient(gradient: gradientView.gradient)
+        let gradient = ThemeStore.nextGradient(gradient: gradientView.gradient)
+        gradientView.gradient = gradient
+        
+        let index = ThemeStore.indexOf(gradient: gradient)
+        let defaults = UserDefaults.init()
+        defaults.set(index, forKey: "backgroundGradient")
+        defaults.synchronize()
     }
 }
 
