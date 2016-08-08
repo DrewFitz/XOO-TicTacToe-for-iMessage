@@ -132,19 +132,27 @@
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.0" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.3843137254901961" green="0.94117647058823528" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PuU-3z-hmT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnB-rt-DtW" secondAttribute="leadingMargin" constant="10" id="KHd-DZ-RMl"/>
                             <constraint firstItem="PuU-3z-hmT" firstAttribute="centerY" secondItem="fnB-rt-DtW" secondAttribute="centerY" id="dog-Oa-C2B"/>
                             <constraint firstItem="PuU-3z-hmT" firstAttribute="centerX" secondItem="fnB-rt-DtW" secondAttribute="centerX" id="xVB-jq-JBo"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="moK-ec-bRX" appends="YES" id="9Ts-E8-V2K"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="0F9-kw-RHw" id="5bW-Gv-zbi"/>
+                        <outlet property="gradientView" destination="fnB-rt-DtW" id="tWa-Nv-Rsq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZB-zI-JgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="moK-ec-bRX">
+                    <connections>
+                        <action selector="doubleTwoTapGestureActionWithSender:" destination="9yR-8Z-h5l" id="ZCA-4O-3YS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="834.375" y="795.42253521126759"/>
         </scene>
@@ -173,7 +181,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-5A-ufM">
-                                                        <frame key="frameInset" minY="-1"/>
+                                                        <frame key="frameInset" minY="-2"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                                         <state key="normal" title="New Game">
@@ -198,8 +206,6 @@
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.0" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.40392156862745099" green="0.96470588235294119" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="olR-TZ-Yn0" firstAttribute="centerX" secondItem="wDw-dK-pzP" secondAttribute="centerX" id="Acd-Ag-Nd5"/>
                             <constraint firstItem="olR-TZ-Yn0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wDw-dK-pzP" secondAttribute="leadingMargin" constant="10" id="IJa-Yd-NbK"/>

@@ -19,6 +19,7 @@ class MessagesViewController: MSMessagesAppViewController {
             presentNewGameScreen()
         case .expanded:
             var game = TicTacToeGame()
+            let readOnly : Bool
             if let url = conversation.selectedMessage?.url,
                let components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
             {
@@ -26,8 +27,11 @@ class MessagesViewController: MSMessagesAppViewController {
                 if !success {
                     print("failed to load game from url: \(url)")
                 }
+                readOnly = wasMessageSentFromMe(message: conversation.selectedMessage!, conversation: conversation)
+            } else {
+                readOnly = false
             }
-            present(game: game)
+            present(game: game, readOnly: readOnly)
         }
         
     }
@@ -38,7 +42,8 @@ class MessagesViewController: MSMessagesAppViewController {
                 var game = TicTacToeGame()
                 _ = game.from(components: components)
                 dismissAllChildren()
-                present(game: game)
+                let readOnly = wasMessageSentFromMe(message: message, conversation: conversation)
+                present(game: game, readOnly: readOnly)
             }
         }
     }
@@ -51,21 +56,30 @@ class MessagesViewController: MSMessagesAppViewController {
             presentNewGameScreen()
         case .expanded:
             var game = TicTacToeGame()
+            let readOnly : Bool
             if let message = activeConversation?.selectedMessage {
                 _ = game.from(components: URLComponents(url: message.url!, resolvingAgainstBaseURL: false)!)
+                readOnly = wasMessageSentFromMe(message: message, conversation: activeConversation!)
+            } else {
+                readOnly = false
             }
-            present(game: game)
+            present(game: game, readOnly: readOnly)
         }
         
     }
     
     // MARK: Utilities
     
-    private func present(game: TicTacToeGame) {
+    private func wasMessageSentFromMe(message: MSMessage, conversation: MSConversation) -> Bool {
+        return message.senderParticipantIdentifier == conversation.localParticipantIdentifier
+    }
+    
+    private func present(game: TicTacToeGame, readOnly: Bool) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "ActiveGameScene")
         if let tController = controller as? ActiveGameViewController {
             tController.delegate = self
             tController.game = game
+            tController.readOnly = readOnly
         }
         
         attachController(controller!)

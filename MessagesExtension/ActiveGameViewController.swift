@@ -17,12 +17,18 @@ protocol ActiveGameViewControllerDelegate {
 class ActiveGameViewController: UIViewController {
     var game : TicTacToeGame!
     var delegate : ActiveGameViewControllerDelegate?
+    var readOnly : Bool = false
     @IBOutlet weak var collectionView : UICollectionView!
+    @IBOutlet weak var gradientView: GradientView!
 
     // HACK: fix erroneous edge insets for the scroll/collection view
     override func viewDidLayoutSubviews() {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
+    @IBAction func doubleTwoTapGestureAction(sender:AnyObject) {
+        gradientView.gradient = ThemeStore.shared.nextGradient(gradient: gradientView.gradient)
     }
 }
 
@@ -54,7 +60,7 @@ extension ActiveGameViewController : UICollectionViewDataSource {
 extension ActiveGameViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return game.board[indexPath.row] == .none
+        return game.board[indexPath.row] == .none && !readOnly
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
