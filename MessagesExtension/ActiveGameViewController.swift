@@ -65,17 +65,15 @@ extension ActiveGameViewController : UICollectionViewDataSource {
 extension ActiveGameViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return game.board[indexPath.row] == .none && !readOnly
+        let noWinner = game.winner() == .none
+        let spaceIsOpen = game.board[indexPath.row] == .none
+        return spaceIsOpen && noWinner && !readOnly
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if game.winner() == .none {
-            game.board[indexPath.row] = game.nextMove()
-            collectionView.reloadData()
-            self.delegate?.activeGameView(self, didSelectCellAt: indexPath)
-        } else {
-            self.delegate?.activeGameViewCancelledChoosing(self)
-        }
+        game.board[indexPath.row] = game.nextMove()
+        collectionView.reloadData()
+        self.delegate?.activeGameView(self, didSelectCellAt: indexPath)
     }
 }
 

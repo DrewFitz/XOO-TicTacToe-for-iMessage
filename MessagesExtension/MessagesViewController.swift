@@ -149,7 +149,8 @@ extension MessagesViewController : ActiveGameViewControllerDelegate {
         case 1:
             return "Started a new game."
         case 2 ... Int.max:
-            if let winner = game.winner() {
+            let winner = game.winner()
+            if winner != .none {
                 return "\(winner)".capitalized + " won the game!"
             } else {
                 return nil

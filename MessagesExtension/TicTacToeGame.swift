@@ -21,7 +21,7 @@ struct TicTacToeGame {
         board = [Move].init(repeating: .none, count: 9)
     }
     
-    func winner() -> Move? {
+    func winner() -> Move {
         
         // Board Layout
         // 0 1 2
@@ -53,7 +53,7 @@ struct TicTacToeGame {
             
         }
         
-        return nil
+        return .none
     }
     
     func currentMoveNumber() -> Int {
