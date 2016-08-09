@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QrC-Ji-OlD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sb2-bU-Tlo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="43u-S5-kyD"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="fnB-rt-DtW" customClass="GradientView" customModule="MessagesExtension" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuU-3z-hmT">
@@ -165,7 +165,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sry-D9-PHq"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="wDw-dK-pzP" customClass="GradientView" customModule="MessagesExtension" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olR-TZ-Yn0">
@@ -218,6 +218,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3oh-bd-Mxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="206.25" y="795.42253521126759"/>
+        </scene>
+        <!--Error View Controller-->
+        <scene sceneID="LJs-bG-gVE">
+            <objects>
+                <viewController storyboardIdentifier="ErrorScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="udE-Ov-yY0" userLabel="Error View Controller" customClass="ErrorViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WKQ-D5-0bd"/>
+                        <viewControllerLayoutGuide type="bottom" id="qCl-hA-3ty"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lKe-xc-uJZ" customClass="GradientView" customModule="MessagesExtension" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-Lh-xUF">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="81u-AE-iOg">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-dG-cY4">
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zoz-R0-0vN">
+                                                <frame key="frameInset"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can only play in 1-on-1 chats!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQd-di-34Y">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="OQd-di-34Y" firstAttribute="bottom" secondItem="Zoz-R0-0vN" secondAttribute="bottomMargin" id="3wf-TJ-5kz"/>
+                                                    <constraint firstItem="OQd-di-34Y" firstAttribute="top" secondItem="Zoz-R0-0vN" secondAttribute="topMargin" id="CCZ-6P-tXM"/>
+                                                    <constraint firstItem="OQd-di-34Y" firstAttribute="trailing" secondItem="Zoz-R0-0vN" secondAttribute="trailingMargin" id="Nw6-tC-Tqy"/>
+                                                    <constraint firstItem="OQd-di-34Y" firstAttribute="leading" secondItem="Zoz-R0-0vN" secondAttribute="leadingMargin" id="g95-OR-iKd"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uEg-dG-cY4" firstAttribute="top" secondItem="81u-AE-iOg" secondAttribute="top" id="1cV-Ny-7GV"/>
+                                        <constraint firstAttribute="trailing" secondItem="uEg-dG-cY4" secondAttribute="trailing" id="6T6-bk-MSS"/>
+                                        <constraint firstItem="uEg-dG-cY4" firstAttribute="leading" secondItem="81u-AE-iOg" secondAttribute="leading" id="JOH-hw-VG7"/>
+                                        <constraint firstAttribute="bottom" secondItem="uEg-dG-cY4" secondAttribute="bottom" id="JY9-UL-HVx"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n2g-Lh-xUF" firstAttribute="centerX" secondItem="lKe-xc-uJZ" secondAttribute="centerX" id="owc-av-zAe"/>
+                            <constraint firstItem="n2g-Lh-xUF" firstAttribute="centerY" secondItem="lKe-xc-uJZ" secondAttribute="centerY" id="qrk-DP-2DD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kE-14-1qH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="1457.7211394302849"/>
         </scene>
     </scenes>
 </document>

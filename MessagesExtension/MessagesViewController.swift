@@ -11,8 +11,8 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
-    override func willBecomeActive(with conversation: MSConversation) {
-        super.willBecomeActive(with: conversation)
+    override func didBecomeActive(with conversation: MSConversation) {
+        super.didBecomeActive(with: conversation)
         
         switch presentationStyle {
         case .compact:
@@ -21,7 +21,7 @@ class MessagesViewController: MSMessagesAppViewController {
             var game = TicTacToeGame()
             let readOnly : Bool
             if let url = conversation.selectedMessage?.url,
-               let components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
+                let components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
             {
                 let success = game.from(components: components)
                 if !success {
@@ -73,6 +73,12 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     private func present(game: TicTacToeGame, readOnly: Bool) {
+        
+        if activeConversation?.remoteParticipantIdentifiers.count > 1 {
+            presentErrorScreen()
+            return
+        }
+        
         let controller = storyboard?.instantiateViewController(withIdentifier: "ActiveGameScene")
         if let tController = controller as? ActiveGameViewController {
             tController.delegate = self
@@ -84,10 +90,22 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     private func presentNewGameScreen() {
+        
+        if activeConversation?.remoteParticipantIdentifiers.count > 1 {
+            presentErrorScreen()
+            return
+        }
+        
         let controller = storyboard?.instantiateViewController(withIdentifier: "NewGameScene")
         if let ngController = controller as? NewGameViewController {
             ngController.delegate = self
         }
+        
+        attachController(controller!)
+    }
+    
+    private func presentErrorScreen() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ErrorScene")
         
         attachController(controller!)
     }
