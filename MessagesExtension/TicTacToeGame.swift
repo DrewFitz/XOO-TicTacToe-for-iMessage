@@ -25,6 +25,12 @@ struct TicTacToeGame {
     
     private var moveSequence : [Int]
     
+    var sequence : [Int] {
+        get {
+            return moveSequence
+        }
+    }
+    
     init() {
         _board = [Move].init(repeating: .none, count: 9)
         moveSequence = []

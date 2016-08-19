@@ -26,6 +26,12 @@ class ActiveGameViewController: UIViewController {
         gradientView.gradient = ThemeStore.gradient(index)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if game.winner() != .none {
+            animateMoves()
+        }
+    }
+    
     @IBAction func doubleTwoTapGestureAction(sender:AnyObject) {
         let gradient = ThemeStore.nextGradient(gradient: gradientView.gradient)
         gradientView.gradient = gradient
@@ -34,6 +40,33 @@ class ActiveGameViewController: UIViewController {
         let defaults = UserDefaults.init()
         defaults.set(index, forKey: "backgroundGradient")
         defaults.synchronize()
+    }
+        
+    private func animateNext<T : Collection>(cells: [UICollectionViewCell], sequence : T)
+        where T: Sequence, T.SubSequence == ArraySlice<Int>, T.Iterator.Element == Int {
+        if let slot = sequence.first {
+            UIView.animate(withDuration: 0.5, animations: {
+                let cell = cells[slot]
+                cell.alpha = 1
+                }, completion: { success in
+                    let next : ArraySlice<Int> = sequence.dropFirst(1)
+                    self.animateNext(cells: cells, sequence: next)
+            })
+        }
+    }
+    
+    func animateMoves() {
+        var cells = collectionView.visibleCells
+        
+        // make sure the cells are in the proper order
+        cells.sort {
+            collectionView.indexPath(for: $0.0)!.row < collectionView.indexPath(for: $0.1)!.row
+        }
+        
+        // hide all the cells
+        let _ = cells.map { $0.alpha = 0 }
+        
+        animateNext(cells: cells, sequence: game.sequence)
     }
 }
 
