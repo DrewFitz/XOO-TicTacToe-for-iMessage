@@ -71,7 +71,7 @@ extension ActiveGameViewController : UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        game.board[indexPath.row] = game.nextMove()
+        game.addMove(at: indexPath.row)
         collectionView.reloadData()
         self.delegate?.activeGameView(self, didSelectCellAt: indexPath)
     }

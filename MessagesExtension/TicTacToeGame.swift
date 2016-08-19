@@ -15,10 +15,19 @@ struct TicTacToeGame {
         case cross = "x"
     }
     
-    var board : [Move]
+    private var _board : [Move]
+    
+    var board : [Move] {
+        get {
+            return _board
+        }
+    }
+    
+    private var moveSequence : [Int]
     
     init() {
-        board = [Move].init(repeating: .none, count: 9)
+        _board = [Move].init(repeating: .none, count: 9)
+        moveSequence = []
     }
     
     func winner() -> Move {
@@ -66,11 +75,14 @@ struct TicTacToeGame {
         return [.cross, .circle][count % 2]
     }
     
+    mutating func addMove(at slot: Int) {
+        _board[slot] = nextMove()
+        moveSequence.append(slot)
+    }
+    
     func toURLComponents() -> URLComponents {
-        var componentString = ""
-        for move in board {
-            componentString.append(move.rawValue)
-        }
+        let componentString = moveSequence.reduce("") { $0 + "\($1)" }
+        
         var components = URLComponents()
         components.scheme = "data"
         components.path = componentString
@@ -79,18 +91,17 @@ struct TicTacToeGame {
     
     mutating func from(components: URLComponents) -> Bool {
         let componentString = components.path
-        var newBoard = [Move]()
+        // save the old board in case of error
+        let oldBoard = _board
+        _board = [Move].init(repeating: .none, count: 9)
         for character in componentString.characters {
-            if let move = Move(rawValue: String(character)) {
-                newBoard.append(move)
+            if let slot = Int.init(String(character)) {
+                addMove(at: slot)
             } else {
+                _board = oldBoard
                 return false
             }
         }
-        guard newBoard.count == 9 else {
-            return false
-        }
-        board = newBoard
         return true
     }
 }
