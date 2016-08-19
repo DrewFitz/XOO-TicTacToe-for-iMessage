@@ -74,7 +74,7 @@ class MessagesViewController: MSMessagesAppViewController {
     
     private func present(game: TicTacToeGame, readOnly: Bool) {
         
-        if activeConversation?.remoteParticipantIdentifiers.count > 1 {
+        if (activeConversation?.remoteParticipantIdentifiers.count)! > 1 {
             presentErrorScreen()
             return
         }
@@ -91,7 +91,7 @@ class MessagesViewController: MSMessagesAppViewController {
     
     private func presentNewGameScreen() {
         
-        if activeConversation?.remoteParticipantIdentifiers.count > 1 {
+        if (activeConversation?.remoteParticipantIdentifiers.count)! > 1 {
             presentErrorScreen()
             return
         }

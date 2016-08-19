@@ -27,11 +27,10 @@ import CoreGraphics
             let ratios : [CGFloat] = [0.333, 0.666]
             
             for ratio in ratios {
-                context.moveTo(x: inset, y: bounds.height * ratio)
-                context.addLineTo(x: bounds.width - inset, y: bounds.height * ratio)
-                
-                context.moveTo(x: bounds.width * ratio, y: inset)
-                context.addLineTo(x: bounds.width * ratio, y: bounds.height - inset)
+                context.move(to: CGPoint(x: inset, y: bounds.height * ratio))
+                context.addLine(to: CGPoint(x: bounds.width - inset, y: bounds.height * ratio))
+                context.move(to: CGPoint(x: bounds.width * ratio, y: inset))
+                context.addLine(to: CGPoint(x: bounds.width * ratio, y: bounds.height - inset))
             }
             
             context.strokePath()

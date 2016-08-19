@@ -28,7 +28,7 @@ struct Gradient {
             components.append(color.alpha)
         }
         
-        let gradient = CGGradient(colorComponentsSpace: colorSpace, components: components, locations: cgLocations, count: cgLocations.count)
+        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: components, locations: cgLocations, count: cgLocations.count)
         return gradient
     }
     
@@ -58,7 +58,7 @@ class ThemeStore {
                                     summerCitrusGradient]
 
     static func gradient(_ index: Int) -> Gradient {
-        return gradients[index] ?? defaultGradient
+        return gradients[index]
     }
     
     static func indexOf(gradient : Gradient) -> Int {

@@ -47,13 +47,13 @@ import CoreGraphics
         switch move {
         case .circle:
             let radius = min(bounds.width, bounds.height) / 2.8
-            context.addArc(centerX: point.x, y: point.y, radius: radius, startAngle: 0, endAngle: 2*3.15, clockwise: 0)
+            context.addArc(center: point, radius: radius, startAngle: 0, endAngle: 2*3.15, clockwise: true)
         case .cross:
             let offset = min(bounds.width, bounds.height) / 3
-            context.moveTo(x: point.x - offset, y: point.y - offset)
-            context.addLineTo(x: point.x + offset, y: point.y + offset)
-            context.moveTo(x: point.x + offset, y: point.y - offset)
-            context.addLineTo(x: point.x - offset, y: point.y + offset)
+            context.move(to: CGPoint(x: point.x - offset, y: point.y - offset))
+            context.addLine(to: CGPoint(x: point.x + offset, y: point.y + offset))
+            context.move(to: CGPoint(x: point.x + offset, y: point.y - offset))
+            context.addLine(to: CGPoint(x: point.x - offset, y: point.y + offset))
         case .none:
             return
         }
